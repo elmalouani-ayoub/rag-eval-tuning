@@ -1,0 +1,44 @@
+name: CI
+
+# Lance les tests ET rejoue le sweep d'evaluation a chaque push / PR.
+# Tout tourne hors-ligne (embeddings tfidf/hashing) : pas de GPU, pas de modele
+# a telecharger. Cela garantit que l'evaluation est reproductible.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: PYTHONPATH=src pytest -q
+
+      - name: Run evaluation sweep (offline)
+        run: python scripts/run_eval.py
+
+      - name: Generate figures
+        run: python scripts/make_figures.py
+
+      - name: Upload evaluation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-results
+          path: |
+            results/results.csv
+            results/figures/*.png

@@ -1,0 +1,145 @@
+{
+  "description": "Jeu d'evaluation RAG - 20 questions avec verite-terrain. 'source_doc' = document contenant la reponse (verite-terrain retrieval). 'answer_span' = extrait verbatim present dans le document source (verite-terrain span-level).",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "Combien de jours de conges payes par an un salarie en CDI acquiert-il ?",
+      "answer": "25 jours ouvres de conges payes par an.",
+      "answer_span": "25 jours ouvres de conges payes par an",
+      "source_doc": "01-conges-rtt.md"
+    },
+    {
+      "id": "q02",
+      "question": "Combien de jours de RTT les salaries au forfait jours ont-ils par an ?",
+      "answer": "10 jours de RTT par an.",
+      "answer_span": "10 jours de RTT par an",
+      "source_doc": "01-conges-rtt.md"
+    },
+    {
+      "id": "q03",
+      "question": "Combien de jours de conge sont accordes pour un mariage ?",
+      "answer": "4 jours pour un mariage ou un PACS.",
+      "answer_span": "4 jours pour un mariage ou un PACS",
+      "source_doc": "01-conges-rtt.md"
+    },
+    {
+      "id": "q04",
+      "question": "Combien de jours de teletravail par semaine sont autorises au maximum ?",
+      "answer": "Jusqu'a 3 jours par semaine.",
+      "answer_span": "3 jours par semaine",
+      "source_doc": "02-teletravail.md"
+    },
+    {
+      "id": "q05",
+      "question": "Quel est le montant de l'indemnite de teletravail ?",
+      "answer": "10 euros par mois.",
+      "answer_span": "indemnite forfaitaire de teletravail de 10 euros par mois",
+      "source_doc": "02-teletravail.md"
+    },
+    {
+      "id": "q06",
+      "question": "Quel jour est une journee de presence obligatoire sur site ?",
+      "answer": "Le mardi.",
+      "answer_span": "journee de presence obligatoire",
+      "source_doc": "02-teletravail.md"
+    },
+    {
+      "id": "q07",
+      "question": "Quel est le plafond de remboursement pour un repas en deplacement ?",
+      "answer": "19 euros par repas.",
+      "answer_span": "19 euros par repas",
+      "source_doc": "03-notes-de-frais.md"
+    },
+    {
+      "id": "q08",
+      "question": "Quel est le montant de l'indemnite kilometrique ?",
+      "answer": "0,52 euro par kilometre.",
+      "answer_span": "0,52 euro par kilometre",
+      "source_doc": "03-notes-de-frais.md"
+    },
+    {
+      "id": "q09",
+      "question": "Sous quel delai une note de frais validee est-elle remboursee ?",
+      "answer": "Sous un delai maximum de 30 jours apres validation.",
+      "answer_span": "delai maximum de 30 jours",
+      "source_doc": "03-notes-de-frais.md"
+    },
+    {
+      "id": "q10",
+      "question": "Quelle est la longueur minimale d'un mot de passe professionnel ?",
+      "answer": "Au minimum 12 caracteres.",
+      "answer_span": "au minimum 12 caracteres",
+      "source_doc": "04-securite-informatique.md"
+    },
+    {
+      "id": "q11",
+      "question": "Tous les combien de jours le mot de passe doit-il etre renouvele ?",
+      "answer": "Tous les 90 jours.",
+      "answer_span": "renouvele tous les 90 jours",
+      "source_doc": "04-securite-informatique.md"
+    },
+    {
+      "id": "q12",
+      "question": "A quelle adresse faut-il signaler un courriel de phishing ?",
+      "answer": "A l'adresse securite@meridian.fr.",
+      "answer_span": "securite@meridian.fr",
+      "source_doc": "04-securite-informatique.md"
+    },
+    {
+      "id": "q13",
+      "question": "Quelle est la duree de la periode d'essai pour un cadre ?",
+      "answer": "4 mois pour un cadre, renouvelable une fois.",
+      "answer_span": "4 mois pour un cadre",
+      "source_doc": "05-onboarding.md"
+    },
+    {
+      "id": "q14",
+      "question": "Combien de temps dure le parcours d'integration ?",
+      "answer": "Un parcours d'integration de 5 jours.",
+      "answer_span": "parcours d'integration de 5 jours",
+      "source_doc": "05-onboarding.md"
+    },
+    {
+      "id": "q15",
+      "question": "Tous les combien d'annees le parc informatique est-il renouvele ?",
+      "answer": "Tous les 4 ans.",
+      "answer_span": "tous les 4 ans",
+      "source_doc": "06-materiel-support-it.md"
+    },
+    {
+      "id": "q16",
+      "question": "Quels sont les horaires du support informatique ?",
+      "answer": "De 8h a 19h du lundi au vendredi.",
+      "answer_span": "8h a 19h du lundi au vendredi",
+      "source_doc": "06-materiel-support-it.md"
+    },
+    {
+      "id": "q17",
+      "question": "Quel est le budget formation annuel par salarie ?",
+      "answer": "1 500 euros par an.",
+      "answer_span": "budget formation annuel de 1 500 euros",
+      "source_doc": "07-formation.md"
+    },
+    {
+      "id": "q18",
+      "question": "Combien de jours avant le depart faut-il reserver un voyage professionnel ?",
+      "answer": "Au moins 10 jours avant le depart.",
+      "answer_span": "10 jours avant le depart",
+      "source_doc": "08-voyages-professionnels.md"
+    },
+    {
+      "id": "q19",
+      "question": "Quelle est la valeur faciale d'un titre-restaurant ?",
+      "answer": "10 euros.",
+      "answer_span": "titres-restaurant d'une valeur faciale de 10 euros",
+      "source_doc": "09-avantages-sociaux.md"
+    },
+    {
+      "id": "q20",
+      "question": "Quel est le preavis de demission pour un cadre ?",
+      "answer": "3 mois pour un cadre.",
+      "answer_span": "3 mois pour un cadre",
+      "source_doc": "10-offboarding.md"
+    }
+  ]
+}

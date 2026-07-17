@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragkit"
+version = "1.0.0"
+description = "Systeme RAG avec evaluation et tuning d'hyperparametres"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scikit-learn", "matplotlib", "PyYAML"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
