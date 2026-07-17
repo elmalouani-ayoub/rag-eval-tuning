@@ -1,6 +1,6 @@
 # RAG Eval & Tuning — système RAG avec évaluation et tuning d'hyperparamètres
 
-[![CI](https://github.com/<ton-user>/rag-eval-tuning/actions/workflows/ci.yml/badge.svg)](https://github.com/<ton-user>/rag-eval-tuning/actions)
+![CI](https://github.com/<elmalouani-ayoub>/rag-eval-tuning/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
