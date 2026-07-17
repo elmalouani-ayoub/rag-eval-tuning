@@ -1,6 +1,6 @@
 # RAG Eval & Tuning — système RAG avec évaluation et tuning d'hyperparamètres
 
-![CI](https://github.com/<elmalouani-ayoub>/rag-eval-tuning/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/elmalouani-ayoub/rag-eval-tuning/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -31,15 +31,15 @@ overlap, `top_k`, méthode d'embedding) sur la qualité du retrieval.
 
 ```mermaid
 flowchart LR
-    A[Corpus .md<br/>base de connaissances] --> B[Chunking<br/>size / overlap]
-    B --> C[Embeddings<br/>tfidf · hashing · ST · ollama]
-    C --> D[(Index vectoriel<br/>numpy / FAISS)]
-    Q[Question] --> C
-    D --> E[Retrieval top_k]
-    E --> F[LLM<br/>ollama / extractif]
-    F --> G[Réponse + sources]
-    E -.évalué contre.-> H[[Jeu d'évaluation<br/>20 Q&R vérité-terrain]]
-    H --> I{{Métriques<br/>hit@k · MRR · span_recall · precision}}
+    A["Corpus .md<br/>base de connaissances"] --> B["Chunking<br/>size / overlap"]
+    B --> C["Embeddings<br/>tfidf · hashing · ST · ollama"]
+    C --> D[("Index vectoriel<br/>numpy / FAISS")]
+    Q["Question"] --> C
+    D --> E["Retrieval top_k"]
+    E --> F["LLM<br/>ollama / extractif"]
+    F --> G["Réponse + sources"]
+    E -.->|"évalué contre"| H[["Jeu d'évaluation<br/>20 Q&R vérité-terrain"]]
+    H --> I{{"Métriques<br/>hit@k · MRR · span_recall · precision"}}
 ```
 
 Le harnais d'évaluation (branche du bas) est **indépendant du LLM** : il ne juge que le
